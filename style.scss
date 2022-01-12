@@ -114,6 +114,12 @@ header {
 
 // our_services section 
 
+.our_services {
+    background: $white;
+    position: relative;
+    overflow: hidden;
+}
+
 section {
     h1.section_heading {
         font-size: 55px;
@@ -139,6 +145,10 @@ section {
             &:hover {
                 box-shadow: 15px 15px 60px #00000010;
                 border-radius: 8px;
+                button.learn_more {
+                    transform: translateX(0px);
+                    opacity: 1;
+                }
             }
         }
         .card_wrap {
@@ -153,22 +163,35 @@ section {
                 padding-left: 60px;
             }
         }
-        &:nth-child(2) {
-            .card_wrap {
-                &:first-child {
-                    .card_icon {
-                        background: #21AAE910;
-                    }
+        .card_wrap {
+            &:first-child {
+                .card_icon {
+                    background: #21AAE910;
                 }
-                &:nth-child(2) {
-                    .card_icon {
-                        background: #F1212110;
-                    }
+            }
+            &:nth-child(2) {
+                .card_icon {
+                    background: #F1212110;
                 }
-                &:nth-child(3) {
-                    .card_icon {
-                        background: #EED91910;
-                    }
+            }
+            &:nth-child(3) {
+                .card_icon {
+                    background: #EED91910;
+                }
+            }
+            &:nth-child(4) {
+                .card_icon {
+                    background: #FF8A0010
+                }
+            }
+            &:nth-child(5) {
+                .card_icon {
+                    background: #FF00B810;
+                }
+            }
+            &:nth-child(6) {
+                .card_icon {
+                    background: #21E97110;
                 }
             }
         }
@@ -216,6 +239,9 @@ section {
             border: 0;
             color: $lightBlue;
             font-size: 14px;
+            transform: translateX(-100px);
+            opacity: 0;
+            transition: 0.5s ease all;
             img {
                 margin-left: 24px;
             }
@@ -225,10 +251,69 @@ section {
 
 // Our approach section
 
-.our_services {
-    // background: url(Images/Our-services-section.png) no-repeat bottom;
-    // background-size: cover;
-    background: $white;
-    position: relative;
-    overflow: hidden;
+
+.our_approach {
+    background: $coloredBg;
+    .our_approach_wrap {
+        display: flex;
+    }
+    .card_data {
+        width: 60%;
+        padding-top: 172px;
+    }
+    .our_approach_head {
+        width: 40%;
+    }
+    .card_element {
+        .card_wrap {
+            width: 50%;
+            padding-right: 60px!important;
+            padding-left: 0!important;
+        }
+        .card {
+            padding: 26px 45px 32px;
+            text-align: center;
+            position: relative;
+            background-color: $coloredBg;
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%2321AAE9FF' stroke-width='0' stroke-dasharray='12%2c 14' stroke-dashoffset='50' stroke-linecap='square'/%3e%3c/svg%3e");
+            transition: background-image 0.3s ease;
+            &:hover {
+                background-color: $white;
+                background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%2321AAE9FF' stroke-width='3' stroke-dasharray='12%2c 14' stroke-dashoffset='2' stroke-linecap='square'/%3e%3c/svg%3e");
+                &:after {
+                    width: 100%;
+                }
+            }
+            &:after {
+                content: "";
+                background: #21aae9;
+                padding: 7px 0;
+                position: absolute;
+                width: 0%;
+                left: 0;
+                bottom: 0;
+                border-bottom-right-radius: 8px;
+                border-bottom-left-radius: 8px;
+                transition: 0.3s ease all;
+            }
+        }
+        .card_heading {
+            margin: 40px 0 33px;
+        }
+        .card_discription {
+            margin-bottom: 50px;
+            max-width: 100%;
+        }
+        .card_icon {
+            margin: 0 auto;
+        }
+    }
+    .our_approach_image {
+        img {
+            width: 100%;
+            height: 1150px;
+            object-fit: cover;
+            border-radius: 38px;
+        }
+    }
 }
