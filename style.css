@@ -18,11 +18,13 @@ button {
   max-width: 1320px;
   margin: 0 auto;
   z-index: 1;
+  position: relative;
 }
 
 .circle_svg {
   position: absolute;
   pointer-events: none;
+  z-index: 0;
 }
 
 header .circle_svg {
@@ -103,13 +105,46 @@ header .circle_svg.header_second {
   background: #f3fbff;
 }
 
+.cta_btn {
+  text-transform: capitalize;
+  font-weight: 500;
+  font-family: 'Sofia Pro';
+  margin-left: 25px;
+  padding: 18px 20px;
+  width: 200px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#242424), to(#000000));
+  background: linear-gradient(0deg, #242424, #000000);
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  line-height: 1;
+  font-size: 14px;
+  -webkit-box-shadow: 6px 6px 20px #00000020;
+          box-shadow: 6px 6px 20px #00000020;
+}
+
+.cta_btn i.fas.fa-phone-alt {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-text-stroke: 1px #fff;
+  color: #1c1c1c;
+}
+
+.cta_btn i {
+  font-size: 17px;
+  margin-right: 8px;
+}
+
 header {
   position: relative;
 }
 
 header .container {
   max-width: 1434px;
-  z-index: 1;
+}
+
+header .logo img {
+  width: 100%;
 }
 
 header nav {
@@ -142,33 +177,8 @@ header ul li a {
   text-decoration: none;
   color: #000;
   padding: 0 25px;
+  font-size: 16px;
   font-weight: 600;
-}
-
-header .cta_btn {
-  text-transform: capitalize;
-  font-weight: 500;
-  font-family: 'Sofia Pro';
-  margin-left: 25px;
-  padding: 18px 20px;
-  background: -webkit-gradient(linear, left bottom, left top, from(#242424), to(#000000));
-  background: linear-gradient(0deg, #242424, #000000);
-  color: #fff;
-  border: 0;
-  border-radius: 5px;
-  line-height: 1;
-  font-size: 14px;
-  -webkit-box-shadow: 6px 6px 20px #00000020;
-          box-shadow: 6px 6px 20px #00000020;
-}
-
-header .cta_btn i.fas.fa-phone-alt {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  color: #1c1c1c;
-  font-size: 17px;
-  -webkit-text-stroke: 1px #fff;
-  margin-right: 8px;
 }
 
 header main {
@@ -176,7 +186,7 @@ header main {
   display: -ms-flexbox;
   display: flex;
   margin-top: 125px;
-  padding: 0 60px;
+  padding: 0 20px;
 }
 
 header .meeting_image {
@@ -188,6 +198,7 @@ header .meeting_image img {
   position: absolute;
   left: 0;
   z-index: 9;
+  width: 100%;
 }
 
 header .heading_content {
@@ -680,8 +691,8 @@ section .card_element .learn_more img {
 
 .our_promise .svg_animation svg {
   position: absolute;
-  width: 110%;
-  left: 120px;
+  width: 100%;
+  left: 60px;
   top: 0;
   -webkit-transform: translateY(-32%);
           transform: translateY(-32%);
@@ -813,5 +824,343 @@ section .card_element .learn_more img {
 
 .technology_stack .tech_Images .tech_with_details img {
   width: 72px;
+}
+
+.contact_form {
+  padding: 92px 0;
+}
+
+.contact_form .circle_svg {
+  top: 129px;
+  left: -402px;
+}
+
+.contact_form .circle_svg.contact_second {
+  top: -404px;
+  right: -296px;
+  left: auto;
+}
+
+.contact_form .form_element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 38px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px 45px;
+  -webkit-box-shadow: 15px 15px 45px #00000010;
+          box-shadow: 15px 15px 45px #00000010;
+}
+
+.contact_form .contact_details {
+  background: #f3fbff;
+  padding: 56px 34px 25px;
+  width: 40%;
+}
+
+.contact_form .contact_heading {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+
+.contact_form .contact_discription {
+  margin-bottom: 52px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.contact_form .contact_details_wrap div {
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact_form .contact_details_wrap .location {
+  margin-bottom: 163px;
+}
+
+.contact_form .contact_details_wrap a {
+  color: #000;
+  text-decoration: none;
+  padding-left: 15px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.contact_form .social_media_icons i {
+  margin-right: 20px;
+}
+
+.contact_form .call i.fas.fa-phone-alt {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.contact_form .form_wrap {
+  width: 60%;
+  padding: 20px 70px;
+}
+
+.contact_form .form_wrap form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+}
+
+.contact_form .form_wrap div {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  padding-right: 10px;
+}
+
+.contact_form .form_wrap div label {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 30px 0 10px;
+}
+
+.contact_form .form_wrap div input {
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid black;
+  height: 35px;
+  font-size: 18px;
+}
+
+.contact_form .form_wrap div textarea {
+  outline: none;
+  height: 105px !important;
+  width: 100% !important;
+  border: 0;
+  border-bottom: 1px solid #000;
+}
+
+.contact_form .form_wrap .last_name {
+  padding-left: 10px;
+}
+
+.contact_form .form_wrap .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact_form .form_wrap .name div label {
+  margin-top: 0;
+}
+
+.contact_form .cta_btn.submit_btn {
+  margin: 42px 10px 0 auto;
+}
+
+footer .container {
+  max-width: 1430px;
+}
+
+footer .left_ftr_content {
+  width: 50%;
+}
+
+footer .left_ftr_content .ftr_logo {
+  margin-bottom: 42px;
+}
+
+footer .left_ftr_content .company_shrt_disc p {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+footer .right_ftr_content {
+  margin-top: 20px;
+  width: 50%;
+}
+
+footer .right_ftr_content .footer_menu {
+  padding-left: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .right_ftr_content .footer_menu li {
+  list-style: none;
+  margin-bottom: 14px !important;
+  font-weight: 400;
+}
+
+footer .right_ftr_content .footer_menu li a {
+  text-decoration: none;
+  color: #A6A9AB;
+}
+
+footer .right_ftr_content .footer_menu li.ftr_menu_heading {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px !important;
+}
+
+footer .right_ftr_content .footer_menu li.ftr_menu_heading a {
+  color: #000;
+}
+
+footer .ftr_content_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 90px 0 75px;
+}
+
+footer .footer_foot_content {
+  padding: 45px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .copyright_text {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+footer .social_media_icons i {
+  font-size: 22px;
+  margin-left: 25px;
+}
+
+@media (min-width: 1850px) {
+  header .meeting_image img {
+    width: 133%;
+  }
+  .our_promise .svg_animation svg {
+    position: absolute;
+    width: 110%;
+    left: 120px;
+    top: 0;
+    -webkit-transform: translateY(-32%);
+            transform: translateY(-32%);
+    overflow: visible !important;
+  }
+}
+
+@media (max-width: 1430px) {
+  .container {
+    max-width: 1200px;
+  }
+  .cta_btn {
+    padding: 16px 25px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .circle_svg img {
+    width: 500px;
+    height: 500px;
+  }
+  section {
+    padding: 100px 0;
+  }
+  section h1.section_heading {
+    font-size: 45px;
+  }
+  section .heading_discription {
+    font-size: 18px;
+  }
+  header .container {
+    max-width: 1200px;
+  }
+  header .logo img {
+    width: 85%;
+  }
+  header ul li a {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+  header main {
+    margin-top: 80px;
+  }
+  header .circle_svg {
+    right: 200px;
+  }
+  header .circle_svg.header_second {
+    bottom: -336px;
+  }
+  header .heading_content h1 {
+    font-size: 50px;
+  }
+  header .heading_content p {
+    font-size: 22px;
+  }
+  header .heading_content .cta_btn {
+    margin: 50px 0 110px;
+  }
+  .our_services .circle_svg {
+    top: -310px;
+    right: 200px;
+  }
+  .our_services .circle_svg.our_services_third {
+    left: -350px !important;
+    bottom: -230px !important;
+  }
+  .our_services .circle_svg.our_services_fourth {
+    right: -340px;
+    bottom: -270px !important;
+  }
+  .our_approach .circle_svg {
+    top: -274px;
+    left: -350px;
+  }
+  .our_approach .circle_svg.our_approach_second {
+    top: -233px;
+    right: -340px;
+  }
+  .our_approach .circle_svg.our_approach_third {
+    bottom: -301px !important;
+    left: -156px;
+  }
+  .our_approach .card_data {
+    width: 70%;
+  }
+  .our_promise .circle_svg {
+    bottom: -212px;
+    left: -424px;
+  }
+  .contact_form .circle_svg.contact_second {
+    top: -245px;
+    right: -296px;
+  }
+  .technology_stack button.tablinks {
+    font-size: 22px;
+    padding: 30px 40px;
+  }
+  footer .container {
+    max-width: 1200px;
+  }
+  footer .left_ftr_content .company_shrt_disc p {
+    font-size: 20px;
+  }
+  footer .copyright_text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .circle_svg {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
